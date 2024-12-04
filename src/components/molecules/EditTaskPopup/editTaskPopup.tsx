@@ -103,8 +103,8 @@ const EditTaskPopup: React.FC<EditTaskPopupProps> = ({
   return (
     <Dialog open={open} onClose={() => setOpen(false)}>
       <div className="bg-white p-8 rounded-lg w-96">
-        <h2 className="text-2xl font-bold mb-4 flex items-center space-x-2">
-          <MdUpdate className="text-blue-500" />
+        <h2 className="text-2xl font-bold mb-4 flex items-center space-x-2 p-4 bg-gradient-to-r from-blue-300 to-blue-500 text-white">
+          <MdUpdate className="text-white" />
           <span>Editar Tarea</span>
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -112,7 +112,7 @@ const EditTaskPopup: React.FC<EditTaskPopupProps> = ({
           <div className="space-y-2">
             <Label htmlFor="title">Título</Label>
             <div className="flex items-center space-x-2">
-              <MdTitle className="text-gray-500" />
+              <MdTitle className="text-blue-500" />
               <Input
                 id="newTitle"
                 name="newTitle"
@@ -125,7 +125,7 @@ const EditTaskPopup: React.FC<EditTaskPopupProps> = ({
           <div className="space-y-2">
             <Label htmlFor="description">Descripción</Label>
             <div className="flex items-center space-x-2">
-              <MdDescription className="text-gray-500" />
+              <MdDescription className="text-blue-500" />
               <Textarea
                 id="newDescription"
                 name="newDescription"
@@ -138,7 +138,7 @@ const EditTaskPopup: React.FC<EditTaskPopupProps> = ({
           <div className="space-y-2">
             <Label htmlFor="newAssignee">Asignar a</Label>
             <div className="flex items-center space-x-2">
-              <MdPerson className="text-gray-500" />
+              <MdPerson className="text-blue-500" />
               <select
                 id="newAssignee"
                 name="newAssignee"
@@ -193,9 +193,9 @@ const EditTaskPopup: React.FC<EditTaskPopupProps> = ({
             <Button
               type="submit"
               disabled={loading}
-              className="flex items-center space-x-2"
+              className="flex items-center space-x-2 bg-blue-500 text-white"
             >
-              <MdUpdate className="text-blue-500" />
+              <MdUpdate className="text-white" />
               <span>{loading ? "Actualizando..." : "Actualizar Tarea"}</span>
             </Button>
           </div>
