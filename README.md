@@ -63,4 +63,16 @@ npx prisma migrate dev --name migracion-inicial
 
 yarn dev
 
-Accede a la aplicación en: http://localhost:3000
+**Link de acceso:**
+
+- **Local:** [http://localhost:3000](http://localhost:3000)
+- **Web:** [https://task-titans-gestion-de-tareas.vercel.app](https://task-titans-gestion-de-tareas.vercel.app)
+
+**Para ingresar al sistema:**
+
+- **Usuario:** `admintask@gmail.com`  
+  **Clave:** `Adm1n_Task#2024!`
+
+- **Usuario:** `usertask@gmail.com`  
+  **Clave:** `User_Task@2024$`
+
