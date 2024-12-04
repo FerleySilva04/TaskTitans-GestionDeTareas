@@ -29,7 +29,7 @@ const CreateItemPage: React.FC = () => {
                 <div className="mb-4">
                     <div className="text-center mb-4">
                         {/* Icono sobre el texto */}
-                        <Briefcase className="text-3xl font-bold tracking-tight text-blue-500" />
+                        <Briefcase className="text-3xl-center mb-4 font-bold tracking-tight text-blue-500" />
                         <h1 className="text-3xl font-bold text-primary">Nuevo proyecto</h1> {/* Cambié el tamaño y color */}
                     </div>
                     <ProjectCreationForm />

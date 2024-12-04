@@ -77,6 +77,7 @@ export const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
   const progress = task.status === "COMPLETED" ? 100 : task.status === "IN_PROGRESS" ? 50 : 0;
 
   const canEdit = task.assignee?.id === user?.id; // Verificar si el usuario es el asignado
+  const canDelete = isAdmin; // Solo ADMIN puede eliminar
 
   return (
     <div className="max-w-sm mx-auto">
@@ -109,8 +110,8 @@ export const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
         {/* Footer con botones de acción */}
         <CardFooter className="p-4 flex justify-between items-center border-t border-gray-200 bg-gray-50">
           <div className="flex space-x-4">
-            {/* Botón para abrir el popup de eliminación */}
-            {isAdmin && (
+            {/* Botón para abrir el popup de eliminación, solo visible para ADMIN */}
+            {canDelete && (
               <Button
                 className="flex items-center justify-center p-2 rounded-md border border-red-500 text-red-500 hover:bg-red-100"
                 onClick={() => setOpenDelete(true)}
@@ -119,8 +120,8 @@ export const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
               </Button>
             )}
 
-            {/* Botón para abrir el popup de edición solo si el usuario es asignado */}
-            {canEdit && (
+            {/* Botón para abrir el popup de edición, visible solo si la tarea está asignada al usuario o si es ADMIN */}
+            {(canEdit || isAdmin) && (
               <Button
                 className="flex items-center justify-center p-2 rounded-md border border-blue-500 text-blue-500 hover:bg-blue-100"
                 onClick={() => setOpenEdit(true)}

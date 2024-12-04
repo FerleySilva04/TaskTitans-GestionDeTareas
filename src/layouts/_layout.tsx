@@ -1,33 +1,33 @@
 import React from "react";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/molecules/Sidebar/sidebar";
-import {ChartCandlestick, User, Album} from "lucide-react";
-import {Role, UserProps} from "@/utils/enums";
+import { Clipboard, BarChart, Users } from "lucide-react";  // Nuevos iconos
+import { Role, UserProps } from "@/utils/enums";
 
 interface AdminLayoutProps {
     children: React.ReactNode;
-    user: UserProps
+    user: UserProps;
 }
 
 // Menu items.
 const items = [
     {
-        title: "Gestión de proyectos",
+        title: "Proyectos y Tareas",
         url: "/admin",
-        icon: Album,
+        icon: Clipboard, // Nuevo ícono
         role: Role.USER
     },
 
     {
-        title: "Análisis de datos",
+        title: "Estadísticas y Análisis",
         url: "/admin/data",
-        icon: ChartCandlestick,
-        role: Role.ADMIN
+        icon: BarChart, // Nuevo ícono
+        role: Role.USER // Asignado el rol USER aquí
     },
     {
-        title: "Gestion de los usuarios",
+        title: "Administrar Usuarios",
         url: "/admin/users",
-        icon: User,
+        icon: Users, // Nuevo ícono
         role: Role.ADMIN
     }
 ]
@@ -37,7 +37,7 @@ const props = {
     withFooter: true,
 }
 
-export default function AdminLayout({ children, user } : AdminLayoutProps) {
+export default function AdminLayout({ children, user }: AdminLayoutProps) {
     return (
         <SidebarProvider>
             <AppSidebar props={props} user={user}/>
