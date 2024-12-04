@@ -70,7 +70,7 @@ yarn dev
 
 **Para ingresar al sistema:**
 
-- **Usuario:** `admintask@gmail.com`  
+- **Usuario Administrador:** `admintask@gmail.com`  
   **Clave:** `Adm1n_Task#2024!`
 
 - **Usuario:** `usertask@gmail.com`  
