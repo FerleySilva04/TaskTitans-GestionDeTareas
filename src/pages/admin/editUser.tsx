@@ -39,7 +39,7 @@ const EditUserPage: React.FC = () => {
     return (
         <AdminLayout user={user}>
             <div className="w-4/5 mx-auto">
-                <h1 className="text-3xl font-bold tracking-tight text-blue-500">
+                <h1 className="text-3xl font-bold tracking-tight text-blue-500 text-center">
                     Editar usuario.
                 </h1>
                 {/* Ajustado el margen superior del formulario para acercarlo aún más */}

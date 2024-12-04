@@ -14,20 +14,20 @@ const items = [
     {
         title: "Proyectos y Tareas",
         url: "/admin",
-        icon: Clipboard, // Nuevo ícono
+        icon: Clipboard, 
         role: Role.USER
     },
 
     {
         title: "Estadísticas y Análisis",
         url: "/admin/data",
-        icon: BarChart, // Nuevo ícono
+        icon: BarChart, 
         role: Role.USER // Asignado el rol USER aquí
     },
     {
         title: "Administrar Usuarios",
         url: "/admin/users",
-        icon: Users, // Nuevo ícono
+        icon: Users, 
         role: Role.ADMIN
     }
 ]

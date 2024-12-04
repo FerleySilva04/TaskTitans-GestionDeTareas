@@ -28,9 +28,9 @@ const CreateItemPage: React.FC = () => {
             <div className="w-4/5 mx-auto flex flex-col min-h-screen">
                 <div className="mb-4">
                     <div className="text-center mb-4">
-                        {/* Icono sobre el texto */}
-                        <Briefcase className="text-3xl-center mb-4 font-bold tracking-tight text-blue-500" />
-                        <h1 className="text-3xl font-bold text-primary">Nuevo proyecto</h1> {/* Cambié el tamaño y color */}
+                        {/* Icono centrado sobre el título */}
+                        <Briefcase className="text-3xl mb-2 mx-auto text-blue-500" />
+                        <h1 className="text-3xl font-bold text-primary">Nuevo proyecto</h1>
                     </div>
                     <ProjectCreationForm />
                 </div>

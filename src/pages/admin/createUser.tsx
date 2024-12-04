@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 import { IsLoading } from "@/components/molecules/Loading/isLoading";
 import useMiddleware from "@/hooks/useMiddleware";
 import { Role } from "@/utils/enums";
-import { FiUserPlus } from "react-icons/fi"; // Icono de React Icons
+import { AiOutlineUserAdd } from "react-icons/ai"; // Cambié el icono aquí
 
 const CreateUserPage: React.FC = () => {
     const user = useMiddleware(Role.ADMIN);
@@ -29,8 +29,8 @@ const CreateUserPage: React.FC = () => {
             <div className="flex flex-col items-center justify-center w-full h-screen bg-gray-50">
                 <div className="bg-white shadow-lg rounded-lg p-8 w-3/4 md:w-1/2 lg:w-1/3">
                     <div className="flex flex-col items-center">
-                        <FiUserPlus className="text-primary-500 text-6xl mb-4" />
-                        <h1 className="text-3xl font-bold text-gray-800 mb-4 text-center">
+                        <AiOutlineUserAdd className="text-blue-500 text-6xl mb-4" /> {/* Nuevo icono con color azul */}
+                        <h1 className="text-3xl font-bold text-blue-500 mb-4 text-center"> {/* Título en azul */}
                             Agregar un Usuario
                         </h1>
                     </div>

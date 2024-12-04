@@ -55,8 +55,8 @@ const EditProjectPopup: React.FC<EditProjectPopupProps> = ({
 
   return (
     <Dialog open={open} onClose={() => setOpen(false)}>
-      <DialogTitle>
-        <FaEdit style={{ marginRight: 8 }} /> Editar Proyecto
+      <DialogTitle className="p-4 bg-gradient-to-r from-blue-300 to-blue-500 text-white">
+        <FaEdit style={{ marginRight: 8 }} className="text-white" /> Editar Proyecto
       </DialogTitle>
       <DialogContent>
         <TextField
@@ -81,14 +81,19 @@ const EditProjectPopup: React.FC<EditProjectPopupProps> = ({
         />
       </DialogContent>
       <DialogActions>
-        <Button onClick={() => setOpen(false)} color="secondary" className="flex items-center">
-          <FaRegTimesCircle style={{ marginRight: 8 }} /> Cancelar
+        <Button
+          onClick={() => setOpen(false)}
+          color="secondary"
+          className="flex items-center"
+        >
+          <FaRegTimesCircle style={{ marginRight: 8 }} />
+          Cancelar
         </Button>
         <Button
           onClick={handleSave}
           color="primary"
           disabled={loading}
-          className="flex items-center"
+          className="flex items-center bg-blue-500 text-white"
         >
           {loading ? (
             <>
@@ -96,7 +101,8 @@ const EditProjectPopup: React.FC<EditProjectPopupProps> = ({
             </>
           ) : (
             <>
-              <FaEdit style={{ marginRight: 8 }} /> Guardar
+              <FaEdit style={{ marginRight: 8 }} className="text-white" />
+              Guardar
             </>
           )}
         </Button>
